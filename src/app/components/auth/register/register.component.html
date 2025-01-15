@@ -1,11 +1,8 @@
 <div>
-  <form
-    id="accesspanel"
-    [formGroup]="registrationForm"
-    (ngSubmit)="submitForm()"
-    autocomplete="off"
-  >
-    <h1 class="text-center">Shop with Zosh</h1>
+  <form id="accesspanel" [formGroup]="registrationForm" (ngSubmit)="submitForm()" autocomplete="off">
+    <div class="flex items-center justify-center">
+      <img src="/assets/logo1.png" class="h-12 w-12">
+    </div>
     <div class="inset">
       <mat-form-field class="w-full">
         <mat-label>First Name</mat-label>
@@ -35,13 +32,7 @@
 
       <mat-form-field class="w-full">
         <mat-label>Password</mat-label>
-        <input
-          matInput
-          formControlName="password"
-          type="password"
-          required
-          minlength="8"
-        />
+        <input matInput formControlName="password" type="password" required minlength="8" />
         @if(registrationForm.controls['password'].hasError('required')){
         <mat-error> Password is required </mat-error>
         } @if(registrationForm.controls['password'].hasError('minlength')){
@@ -50,19 +41,13 @@
       </mat-form-field>
 
       <div class="">
-        <button
-          class="w-full border"
-          style="padding: 1.7rem"
-          type=""
-          mat-raised-button
-          color="accent"
-        >
+        <button class="w-full border" style="padding: 1.7rem" type="" mat-raised-button style="background-color: #d7c59a; border-radius: 0%;">
           REGISTER
         </button>
       </div>
       <div class="flex items-center space-x-3 justify-center my-10">
         <span>if you have already account ?</span>
-        <button class="" mat-button color="accent" (click)="changeTemplate()">
+        <button class="" mat-button style="color: #d7c59a;" (click)="changeTemplate()">
           LOGIN
         </button>
       </div>
