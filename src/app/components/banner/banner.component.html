@@ -22,13 +22,46 @@
         </div>
       
         <!-- Navigation buttons -->
-        <button class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2  text-white rounded-full" id="prevBtn">
+        <button class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2  rounded-full" id="prevBtn">
           <span class="visually-hidden"></span>&lt;
         </button>
-        <button class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2  text-white rounded-full" id="nextBtn">
+        <button class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2  rounded-full" id="nextBtn">
           <span class="visually-hidden"></span>&gt;
         </button>
       </div>
+
+      <div class="categories">
+        <div onclick="" class="rings">
+            <img src="/assets/r1.png" alt="" width="75" height="75" style="border-radius: 50%;">
+            <h3>Rings</h3>
+        </div>
+        <div onclick="" class="bangles">
+            <img src="/assets/b1.png" alt="" width="75" height="75" style="border-radius: 50%;">
+            <h3>Bangles</h3>
+        </div>
+        <div onclick="" class="earrings">
+            <img src="/assets/e1.png" alt="" width="75" height="75" style="border-radius: 50%;">
+            <h3>Earrings</h3>
+        </div>
+        <div onclick="" class="pendant">
+            <img src="/assets/p1.png" alt="" width="75" height="75" style="border-radius: 50%;">
+            <h3>Pendant</h3>
+        </div>
+        <div onclick="" class="necklace">
+            <img src="/assets/n1.png" alt="" width="75" height="75" style="border-radius: 50%;">
+            <h3>Necklace</h3>
+        </div>
+        <div onclick="" class="nosepins">
+            <img src="/assets/n2.png" alt="" width="75" height="75" style="border-radius: 50%;">
+            <h3>Nose Pin</h3>
+        </div>
+        <div onclick="" class="bracelets">
+            <img src="/assets/b2.png" alt="" width="75" height="75" style="border-radius: 50%;">
+            <h3>Bracelets</h3>
+        </div>
+    </div>
+    
+    
       
       <!-- Tailwind CSS-based auto-slide animation -->
       <style>
@@ -51,5 +84,61 @@
         #carousel-container {
           animation: slide 15s infinite;
         }
+
+        .categories {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 20px;
+        }
+  
+  
+        .rings h3 {
+          margin-top: 10px;
+          margin-left: 18px;
+          font-size: 13px;
+          font-family: "Montserrat", serif;
+        }
+  
+        .bangles h3 {
+          margin-top: 10px;
+          margin-left: 15px;
+          font-size: 13px;
+          font-family: "Montserrat", serif;
+        }
+
+        .earrings h3 {
+         margin-top: 10px;
+         margin-left: 15px;
+        font-size: 13px;
+        font-family: "Montserrat", serif;
+      }
+ 
+      .pendant h3 {
+         margin-top: 10px;
+         margin-left: 16px;
+         font-size: 13px;
+         font-family: "Montserrat", serif;
+      }
+  
+  .necklace h3 {
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 13px;
+    font-family: "Montserrat", serif;
+  }
+  
+  .nosepins h3 {
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 13px;
+    font-family: "Montserrat", serif;
+  }
+  
+  .bracelets h3 {
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 13px;
+    font-family: "Montserrat", serif;
+  }
       </style>
       
