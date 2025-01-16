@@ -16,17 +16,5 @@ import { BannerComponent } from '../banner/banner.component';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  products: any[] = [];
-  gouns: any;
-  saree: any;
-  men_kurta: any;
-  shoes: any;
-
-  constructor() {
-    this.products = productData.slice(0, 4);
-    this.gouns = gounsPage1.slice(0, 4);
-    this.saree = lehngacholiPage2.slice(0, 4);
-    this.men_kurta = mens_kurta.slice(0, 4);
-    this.shoes = mensShoesPage1.slice(0, 4);
-  }
+  
 }
