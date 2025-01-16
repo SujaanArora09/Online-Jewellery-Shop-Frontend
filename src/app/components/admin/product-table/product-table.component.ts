@@ -39,13 +39,16 @@ export class ProductTableComponent {
 
   ngOnInit(): void {
     this.store.pipe(select((store) => store.product)).subscribe((products) => {
-      this.products = products;
-      // this.content=products?.content
-      console.log('all products ', products.content);
+      if (products && Array.isArray(products.content)) {
+        this.products = products;
+        console.log('all products ', products.content);
+      } else {
+        console.error('Products or products.content is missing', products);
+        this.products = { content: [] }; // Fallback to empty content
+      }
     });
-
-    
   }
+  
 
  
 

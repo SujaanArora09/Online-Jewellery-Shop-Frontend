@@ -213,11 +213,11 @@ export class OrderService {
 
   deleteOrder(orderId: Number) {
     return this.http
-      .put(`${this.API_BASE_URL}/api/admin/orders/${orderId}/delete`,{}, { headers: this.headers })
+      .delete(`${this.API_BASE_URL}/api/admin/orders/${orderId}/delete`, { headers: this.headers }) // Change to .delete
       .pipe(
         map((data) => {
-          console.log(' get all orders ', data);
-          return deleteOrderSuccess({payload:orderId})
+          console.log('Deleted order successfully', data);
+          return deleteOrderSuccess({ payload: orderId });
         }),
         catchError((error: any) => {
           return of(
@@ -230,6 +230,5 @@ export class OrderService {
         })
       )
       .subscribe((action) => this.store.dispatch(action));
-   
   }
 }
