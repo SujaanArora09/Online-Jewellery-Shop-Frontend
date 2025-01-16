@@ -23,26 +23,21 @@
           <mat-select formControlName="topLavelCategory">
             <mat-option value="men">Men</mat-option>
             <mat-option value="women">Women</mat-option>
-            <mat-option value="kids">Kids</mat-option>
           </mat-select>
         </mat-form-field>
         <mat-form-field>
           <mat-label>Second Level Category</mat-label>
           <mat-select formControlName="secondLavelCategory">
-            <mat-option value="clothing">Clothing</mat-option>
-            <mat-option value="accessories">Accessories</mat-option>
-            <mat-option value="brands">Brands</mat-option>
+            <mat-option value="Jewellery">Jewellery Type</mat-option>
+            <mat-option value="Brands">Brands</mat-option>
           </mat-select>
         </mat-form-field>
         <mat-form-field>
           <mat-label>Third Level Category</mat-label>
           <mat-select formControlName="thirdLavelCategory">
-            <mat-option value="top">Tops</mat-option>
-            <mat-option value="women_dress">Dresses</mat-option>
-            <mat-option value="t-shirts">T-Shirts</mat-option>
-            <mat-option value="women_saree">Saree</mat-option>
-            <mat-option value="lengha_choli">Lengha Choli</mat-option>
-            <mat-option value="men_jeans">Men Jeans</mat-option>
+            <mat-option *ngFor="let category of thirdLevelCategories" [value]="category">
+              {{ category }}
+            </mat-option>
           </mat-select>
         </mat-form-field>
       </div>
@@ -105,7 +100,6 @@
       style="padding: 1.6rem"
       class="w-full py-20"
       mat-raised-button
-      
       type="submit"
       style="background-color: #d7c59a ; border-radius: 0%;"
     >
