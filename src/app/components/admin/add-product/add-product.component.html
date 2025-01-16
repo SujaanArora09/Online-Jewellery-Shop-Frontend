@@ -15,16 +15,21 @@
       </mat-form-field>
       <mat-form-field>
         <input matInput formControlName="color" placeholder="Material" />
+        <input matInput formControlName="color" placeholder="Material" />
       </mat-form-field>
 
       <div class="col-span-2 grid grid-cols-3 gap-2">
         <mat-form-field>
+        <mat-form-field>
           <mat-label>Top Level Category</mat-label>
+          <mat-select formControlName="topLavelCategory">
           <mat-select formControlName="topLavelCategory">
             <mat-option value="men">Men</mat-option>
             <mat-option value="women">Women</mat-option>
+            <mat-option value="kids">Kids</mat-option>
           </mat-select>
         </mat-form-field>
+        <mat-form-field>
         <mat-form-field>
           <mat-label>Second Level Category</mat-label>
           <mat-select formControlName="secondLavelCategory">
@@ -32,6 +37,7 @@
             <mat-option value="brands">Brands</mat-option>
           </mat-select>
         </mat-form-field>
+        <mat-form-field>
         <mat-form-field>
           <mat-label>Third Level Category</mat-label>
           <mat-select formControlName="thirdLavelCategory">
@@ -52,10 +58,22 @@
           placeholder="Description"
           rows="3"
         ></textarea>
+        <textarea
+          matInput
+          formControlName="description"
+          placeholder="Description"
+          rows="3"
+        ></textarea>
       </mat-form-field>
 
       <div class="col-span-2 grid grid-cols-1 lg:grid-cols-3 gap-2">
         <mat-form-field>
+          <input
+            matInput
+            formControlName="price"
+            placeholder="Price"
+            type="number"
+          />
           <input
             matInput
             formControlName="price"
@@ -70,8 +88,20 @@
             placeholder="Discounted Price"
             type="number"
           />
+          <input
+            matInput
+            formControlName="discountedPrice"
+            placeholder="Discounted Price"
+            type="number"
+          />
         </mat-form-field>
         <mat-form-field>
+          <input
+            matInput
+            formControlName="discountPersent"
+            placeholder="Discount Percentage"
+            type="number"
+          />
           <input
             matInput
             formControlName="discountPersent"
@@ -89,8 +119,20 @@
           placeholder="Size Name"
           required
         />
+        <input
+          matInput
+          formControlName="size"
+          placeholder="Size Name"
+          required
+        />
       </mat-form-field>
       <mat-form-field>
+        <input
+          matInput
+          formControlName="quantity"
+          placeholder="Quantity"
+          type="number"
+        />
         <input
           matInput
           formControlName="quantity"
@@ -107,7 +149,16 @@
       type="submit"
       style="background-color: #d7c59a ; border-radius: 0%;"
     >
+    <button
+      style="padding: 1.6rem"
+      class="w-full py-20"
+      mat-raised-button
+      
+      type="submit"
+      style="background-color: #d7c59a ; border-radius: 0%;"
+    >
       Add New Product
     </button>
   </form>
 </div>
+
