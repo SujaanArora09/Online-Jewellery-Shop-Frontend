@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -31,8 +31,9 @@ import { MatSelectModule } from '@angular/material/select';
   templateUrl: './add-product.component.html',
   styleUrl: './add-product.component.css',
 })
-export class AddProductComponent {
+export class AddProductComponent implements OnInit {
   productForm: FormGroup;
+  thirdLevelOptions: any[] = []
 
   constructor(
     private formBuilder: FormBuilder,
@@ -42,7 +43,7 @@ export class AddProductComponent {
       imageUrl: '',
       brand: '',
       title: '',
-      color: '',
+      material: '',
       quantity: null,
       price: null,
       discountedPrice: null,
@@ -64,4 +65,75 @@ export class AddProductComponent {
       console.log(formData);
     }
   }
+
+  menJewelleryTypes = [
+    { value: 'chains', label: 'Chains' },
+    { value: 'bracelet', label: 'Bracelet' },
+    { value: 'ring', label: 'Ring' },
+    { value: 'stud', label: 'Stud'},
+    { value: 'kada', label: 'Kada'}
+  ];
+
+  menBrands = [
+    { value: 'tanishq', label: 'Tanishq' },
+    { value: 'giva', label: 'Giva' },
+    { value: 'Senco', label: 'Senco' },
+    { value: 'Caratlane', label: 'Carat Lane' },
+  ];
+
+  womenJewelleryTypes = [
+    { value: 'earrings', label: 'Earrings' },
+    { value: 'bangles', label: 'Bangles' },
+    { value: 'necklace', label: 'Necklace' },
+    { value: 'nosepin', label: 'Nose Pin' },
+    { value: 'bracelet', label: 'Bracelet' },
+    { value: 'ring', label: 'Ring' },
+    { value: 'pendant', label: 'Pendant' },
+  ];
+
+  womenBrands = [
+    { value: 'tanishq', label: 'Tanishq' },
+    { value: 'giva', label: 'Giva' },
+    { value: 'Senco', label: 'Senco' },
+    { value: 'Caratlane', label: 'Carat Lane' },
+  ];
+
+  ngOnInit(): void {
+    this.productForm = this.formBuilder.group({
+      topLevelCategory: [''],
+      secondLevelCategory: [''],
+      thirdLevelCategory: ['']
+    });
+  }
+
+  onTopLevelChange(event: any) {
+    this.updateThirdLevelOptions();
+  }
+
+  onSecondLevelChange(event: any) {
+    this.updateThirdLevelOptions();
+  }
+
+  updateThirdLevelOptions() {
+    const topLevel = this.productForm.get('topLevelCategory')?.value;
+    const secondLevel = this.productForm.get('secondLevelCategory')?.value;
+
+    // Determine which third-level options to display based on topLevel and secondLevel
+    if (topLevel === 'men') {
+      if (secondLevel === 'jewellerytype') {
+        this.thirdLevelOptions = this.menJewelleryTypes;
+      } else if (secondLevel === 'brands') {
+        this.thirdLevelOptions = this.menBrands;
+      }
+    } else if (topLevel === 'women') {
+      if (secondLevel === 'jewellerytype') {
+        this.thirdLevelOptions = this.womenJewelleryTypes;
+      } else if (secondLevel === 'brands') {
+        this.thirdLevelOptions = this.womenBrands;
+      }
+    } else {
+      this.thirdLevelOptions = [];
+    }
+  }
 }
+

@@ -1,26 +1,23 @@
-export const color = [
-    "white",
-    "Black",
-    "Red",
-    "marun",
-    "Being",
-    "Pink",
-    "Green",
-    "Yellow",
+export const material = [
+    "Gold",
+    "Diamond",
+    "Platinum",
+    "Oxidised",
+    "Silver",
+    "Titanium",
   ];
   
   export const filters = [
     {
-      id: "color",
-      name: "Color",
+      id: "material",
+      name: "Material",
       options: [
-        { value: "white", label: "White" },
-        { value: "beige", label: "Beige" },
-        { value: "blue", label: "Blue" },
-        { value: "brown", label: "Brown" },
-        { value: "green", label: "Green" },
-        { value: "purple", label: "Purple" },
-        { value: "yellow", label:"Yellow"}
+        { value: "gold", label: "Gold" },
+        { value: "diamond", label: "Diamond" },
+        { value: "platinum", label: "Platinum" },
+        { value: "oxidised", label: "Oxidised" },
+        { value: "silver", label: "Silver" },
+        { value: "titanium", label: "Titanium" },
       ],
     },
   
@@ -41,11 +38,11 @@ export const color = [
       id: "price",
       name: "Price",
       options: [
-        { value: "159-399", label: "₹159 To ₹399" },
-        { value: "399-999", label: "₹399 To ₹999" },
-        { value: "999-1999", label: "₹999 To ₹1999" },
-        { value: "1999-2999", label: "₹1999 To ₹2999" },
-        { value: "3999-4999", label: "₹3999 To ₹4999" },
+        { value: "5000-10000", label: "₹5000 To ₹10000" },
+        { value: "10000-20000", label: "₹10000 To ₹20000" },
+        { value: "20000-50000", label: "₹20000 To ₹50000" },
+        { value: "50000-100000", label: "₹50000 To ₹100000" },
+        { value: "100000-500000", label: "₹100000 To ₹500000" },
       ],
     },
     {

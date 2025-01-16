@@ -4,7 +4,7 @@ import { Store, select } from '@ngrx/store';
 import { AppState } from '../../../Models/AppState';
 import { ProductService } from '../../../state/Product/product.service';
 import { productData } from '../../../Data/productData';
-import { filters, singleFilter } from './FilterData';
+import { filters, material, singleFilter } from './FilterData';
 import { Subscription } from 'rxjs';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { ProductCardComponent } from '../product-card/product-card.component';
@@ -52,7 +52,7 @@ export class ProductsComponent {
       (params) => {
         var reqData = {
           category: params.get('lavelThree'),
-          colors: [],
+          material: [],
           sizes: [],
           minPrice: 0,
           maxPrice: 10000,
@@ -74,7 +74,7 @@ export class ProductsComponent {
 
     this.routeQueryParamsSubscription = this.route.queryParams.subscribe(
       (params) => {
-        const color = params['color']; 
+        const material = params['material']; 
         const size = params['size']; 
         const price = params['price']; 
         const discount = params['disccout']; 
@@ -86,7 +86,7 @@ export class ProductsComponent {
 
         const updatedReqData = {
           category: this.lavelThree,
-          colors: params['color'] ? [params['color']].join(',') : [], 
+          material: params['material'] ? [params['material']].join(',') : [], 
           sizes: [],
           minPrice: params['price'] ? minPrice : 0,
           maxPrice: params['price'] ? maxPrice : 100000,
