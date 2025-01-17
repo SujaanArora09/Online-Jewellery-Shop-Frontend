@@ -19,10 +19,10 @@ export const navigation = {
       ],
       sections: [
         {
-          id: 'jewellerytype',
-          name: 'Jewellery Type',
+          id: 'jewellery',
+          name: 'Jewellery',
           items: [
-            { name: 'Earrings', id:"earrings", href: `{women/jewellerytype/earrings}` },
+            { name: 'Earrings', id:"earrings", href: `{women/jewellery/earrings}` },
             { name: 'Bangles', id:"bangles", href: '#' },
             { name: 'Necklace', id: 'necklace' },
             { name: 'Nose Pin', id: 'nosepin' },
@@ -63,8 +63,8 @@ export const navigation = {
       ],
       sections: [
         {
-          id: 'jewellerytype',
-          name: 'Jewellery Type',
+          id: 'jewellery',
+          name: 'Jewellery',
           items: [
             { name: 'Chains', id: 'chains' },
             { name: 'Bracelet', id: 'bracelet' },
@@ -109,10 +109,10 @@ const categories = [
     ],
     sections: [
       {
-        id: 'jewellerytype',
-        name: 'Jewellery Type',
+        id: 'jewellery',
+        name: 'Jewellery',
         items: [
-          { name: 'Earrings', id:"earrings", href: `{women/jewellerytype/earrings}` },
+          { name: 'Earrings', id:"earrings", href: `{women/jewellery/earrings}` },
             { name: 'Bangles', id:"bangles", href: '#' },
             { name: 'Necklace', id: 'necklace' },
             { name: 'Nose Pin', id: 'nosepin' },
@@ -150,8 +150,8 @@ const categories = [
     ],
     sections: [
       {
-        id: 'jewellerytype',
-        name: 'Jewellery Type',
+        id: 'jewellery',
+        name: 'Jewellery',
         items: [
             { name: 'Chains', id: 'chains' },
             { name: 'Bracelet', id: 'bracelet' },
@@ -195,10 +195,10 @@ export const womenCategory={
   ],
   sections: [
     {
-      id: 'jewellerytype',
-      name: 'Jewellery Type',
+      id: 'jewellery',
+      name: 'Jewellery ',
       items: [
-        { name: 'Earrings', id:"earrings", href: `{women/jewellerytype/earrings}` },
+        { name: 'Earrings', id:"earrings", href: `{women/jewellery/earrings}` },
             { name: 'Bangles', id:"bangles", href: '#' },
             { name: 'Necklace', id: 'necklace' },
             { name: 'Nose Pin', id: 'nosepin' },
@@ -239,8 +239,8 @@ export const menCategory={
   ],
   sections: [
     {
-      id: 'jewellerytype',
-      name: 'Jewellery Type',
+      id: 'jewellery',
+      name: 'Jewellery ',
       items: [
         { name: 'Chains', id: 'chains' },
             { name: 'Bracelet', id: 'bracelet' },
