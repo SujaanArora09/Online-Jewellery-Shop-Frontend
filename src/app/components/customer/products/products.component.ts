@@ -52,7 +52,7 @@ export class ProductsComponent {
       (params) => {
         var reqData = {
           category: params.get('lavelThree'),
-          material: [],
+          colors: [],
           sizes: [],
           minPrice: 0,
           maxPrice: 10000,
@@ -86,7 +86,7 @@ export class ProductsComponent {
 
         const updatedReqData = {
           category: this.lavelThree,
-          material: params['material'] ? [params['material']].join(',') : [], 
+          colors: params['color'] ? [params['color']].join(',') : [], 
           sizes: [],
           minPrice: params['price'] ? minPrice : 0,
           maxPrice: params['price'] ? maxPrice : 100000,

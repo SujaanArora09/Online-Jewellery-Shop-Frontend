@@ -40,7 +40,7 @@ export class ProductService {
 
   findProductsByCategory(reqData: ProductRequest) {
     const {
-      material,
+      colors,
       sizes,
       minPrice,
       maxPrice,
@@ -53,7 +53,7 @@ export class ProductService {
     } = reqData;
 
     let params = new HttpParams()
-      .set('material', material)
+      .set('color', colors)
       .set('size', sizes)
       .set('minPrice', minPrice)
       .set('maxPrice', maxPrice)
