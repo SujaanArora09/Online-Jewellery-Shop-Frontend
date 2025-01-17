@@ -52,7 +52,7 @@ export class AdminProductsComponent {
 
     const data = {
       category: '',
-      material: [],
+      colors: [],
       sizes: [],
       minPrice: 0,
       maxPrice: 100000,
@@ -68,7 +68,7 @@ export class AdminProductsComponent {
     this.routeQueryParamsSubscription=this.activatedRoute.queryParams.subscribe((params)=>{
       const data = {
         category: '',
-        material: [],
+        colors: [],
         sizes: [],
         minPrice: 0,
         maxPrice: 100000,
