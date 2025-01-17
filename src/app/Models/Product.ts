@@ -6,7 +6,7 @@ export interface Product {
       parentCategory: any; // Replace 'any' with the appropriate type for parentCategory
       level: number;
     };
-    material?: string;
+    color?: string;
     createdAt?: string;
     description?: string;
     discountPercent?: number;
@@ -24,7 +24,7 @@ export interface Product {
   
   export interface ProductRequest {
     
-    material: any;
+    colors: any;
     sizes: any;
     minPrice: any;
     maxPrice: any;

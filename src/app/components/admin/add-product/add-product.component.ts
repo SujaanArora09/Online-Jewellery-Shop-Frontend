@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatOptionModule } from '@angular/material/core';
 import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-add-product',
@@ -38,7 +39,8 @@ export class AddProductComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private productService: ProductService
+    private productService: ProductService,
+    private snackBar: MatSnackBar
   ) {
     this.productForm = this.formBuilder.group({
       imageUrl: '',
@@ -98,8 +100,20 @@ export class AddProductComponent {
     if (this.productForm.valid) {
       const formData = this.productForm.value;
       formData.size = [{ size: formData.size, quantity: formData.quantity }];
-      this.productService.createProduct(formData);
+
+      // Call the product service to create the product
+      const createProductResponse = this.productService.createProduct(formData);
+
+      // Check if the response is successful (you might need to handle this manually)
+      if (createProductResponse) {
+        this.snackBar.open('Product added successfully!', '', { duration: 3000 });
+      } else {
+        this.snackBar.open('Product failed to add. Please try again.', '', { duration: 3000 });
+      }
+
       console.log(formData);
     }
   }
+
+
 }
