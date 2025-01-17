@@ -1,4 +1,4 @@
-export const material = [
+export const color = [
     "Gold",
     "Diamond",
     "Platinum",
@@ -9,8 +9,8 @@ export const material = [
   
   export const filters = [
     {
-      id: "material",
-      name: "Material",
+      id: "color",
+      name: "color",
       options: [
         { value: "gold", label: "Gold" },
         { value: "diamond", label: "Diamond" },

@@ -4,7 +4,7 @@ import { Store, select } from '@ngrx/store';
 import { AppState } from '../../../Models/AppState';
 import { ProductService } from '../../../state/Product/product.service';
 import { productData } from '../../../Data/productData';
-import { filters, material, singleFilter } from './FilterData';
+import { filters, color, singleFilter } from './FilterData';
 import { Subscription } from 'rxjs';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { ProductCardComponent } from '../product-card/product-card.component';
