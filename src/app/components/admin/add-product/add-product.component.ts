@@ -71,18 +71,18 @@ export class AddProductComponent {
   // Update third level categories based on the selected top and second level categories
   updateThirdLevelCategories(topLevel: string | null, secondLevel: string | null): void {
     if (topLevel === 'men') {
-      if (secondLevel === 'Jewellery') {
-        this.thirdLevelCategories = ['Chains', 'Bracelet', 'Ring', 'Stud', 'Kada'];
-      } else if (secondLevel === 'Brands') {
-        this.thirdLevelCategories = ['Tanishq', 'Giva', 'Senco', 'Carat Lane'];
+      if (secondLevel === 'jewellery') {
+        this.thirdLevelCategories = ['chains', 'bracelet', 'ring', 'stud', 'kada'];
+      } else if (secondLevel === 'brands') {
+        this.thirdLevelCategories = ['tanishq', 'giva', 'senco', 'caratlane'];
       } else {
         this.thirdLevelCategories = [];
       }
     } else if (topLevel === 'women') {
-      if (secondLevel === 'Jewellery') {
-        this.thirdLevelCategories = ['Earrings', 'Bangles', 'Necklace', 'Nose Pin', 'Bracelet', 'Ring', 'Pendent'];
-      } else if (secondLevel === 'Brands') {
-        this.thirdLevelCategories = ['Tanishq', 'Ziva', 'Senco', 'Carat Lane'];
+      if (secondLevel === 'jewellery') {
+        this.thirdLevelCategories = ['earrings', 'bangles', 'necklace', 'nosepin', 'bracelet', 'ring', 'pendent'];
+      } else if (secondLevel === 'brands') {
+        this.thirdLevelCategories = ['tanishq', 'ziva', 'senco', 'caratlane'];
       } else {
         this.thirdLevelCategories = [];
       }
