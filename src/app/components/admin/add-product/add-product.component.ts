@@ -82,8 +82,8 @@ export class AddProductComponent {
       if (secondLevel === 'jewellery') {
         this.thirdLevelCategories = ['earrings', 'bangles', 'necklace', 'nosepin', 'bracelet', 'ring', 'pendent'];
       } else if (secondLevel === 'brands') {
-        this.thirdLevelCategories = ['tanishq', 'ziva', 'senco', 'caratlane'];
-      } else {
+        this.thirdLevelCategories = ['tanishq', 'giva', 'senco', 'caratlane'];
+      } else { 
         this.thirdLevelCategories = [];
       }
     } else {
