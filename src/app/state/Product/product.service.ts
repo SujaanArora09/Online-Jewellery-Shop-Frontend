@@ -11,6 +11,9 @@ import {
   findProductByIdSuccess,
   findProductsByCategoryFailure,
   findProductsByCategorySuccess,
+  findRelatedProductsFailure,
+  findRelatedProductsRequest,
+  findRelatedProductsSuccess,
   recentllyAddedProductsFailure,
   recentllyAddedProductsSuccess,
   updateProductFailure,
@@ -172,5 +175,28 @@ export class ProductService {
       )
       .subscribe((action) => this.store.dispatch(action));
   }
+
+  findRelatedProducts(topLavelCategory: string, secondLavelCategory: string, thirdLavelCategory: string): Observable<any> {
+    const headers = this.getHeaders();
+    let params = new HttpParams()
+      .set('topLavelCategory', topLavelCategory)
+      .set('secondLavelCategory', secondLavelCategory)
+      .set('thirdLavelCategory', thirdLavelCategory);
+  
+    this.store.dispatch(findRelatedProductsRequest({ topLavelCategory, secondLavelCategory, thirdLavelCategory }));
+  
+    return this.http.get(`${this.API_BASE_URL}/api/products/related`, { headers, params }).pipe(
+      map((data: any) => {
+        console.log('Related Products Response:', data); // Add this log
+        this.store.dispatch(findRelatedProductsSuccess({ payload: data }));
+        return data;
+      }),
+      catchError((error: any) => {
+        this.store.dispatch(findRelatedProductsFailure({ error }));
+        return of(error);
+      })
+    );
+  }
+  
 }
       

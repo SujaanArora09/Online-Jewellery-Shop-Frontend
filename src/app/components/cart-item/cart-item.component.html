@@ -24,40 +24,46 @@
     </div>
   </div>
 
-  @if(showButton){
-  <div class="flex items-center lg:space-x-10 pt-4 justify-between">
-    <div class="flex items-center space-x-2">
-      <!-- Decrement quantity button -->
-
-      <div class="example-button-container">
-        <button
-          mat-mini-fab
-          color="accent"
-          aria-label="Example icon button with a delete icon"
-          (click)="updateCartItem(-1)"
-          [disabled]="product.quantity == 1"
-        >
-          <mat-icon>remove</mat-icon>
-        </button>
-      </div>
-      <!-- Quantity display -->
-      <span class="py-1 px-7 border border-gray-800 rounded-sm">{{
-        product.quantity
-      }}</span>
-
-      <!-- Increment quantity button -->
-      <button
-        mat-mini-fab
-        color="accent"
-        aria-label="Example icon button with a plus one icon"
-        (click)="updateCartItem(1)"
-      >
-        <mat-icon>add</mat-icon>
-      </button>
-    </div>
-    <button (click)="removeCartItem()" mat-stroked-button color="accent">
-      Remove
-    </button>
-  </div>
+      @if(showButton){
+        <div class="flex items-center lg:space-x-10 pt-4 justify-between">
+          <div class="flex items-center space-x-2">
+            <!-- Decrement quantity button -->
+            <div class="example-button-container">
+              <button
+                mat-mini-fab
+                aria-label="Example icon button with a delete icon"
+                (click)="updateCartItem(-1)"
+                [disabled]="product.quantity == 1"
+                style="background-color: #d7c59a; border-radius: 0%;"
+              >
+                <mat-icon>remove</mat-icon>
+              </button>
+            </div>
+      
+            <!-- Quantity display -->
+            <span class="py-1 px-7 border border-gray-800 rounded-sm">
+              {{ product.quantity }}
+            </span>
+      
+            <!-- Increment quantity button -->
+            <button
+              mat-mini-fab
+              aria-label="Example icon button with a plus one icon"
+              (click)="updateCartItem(1)"
+              style="background-color: #d7c59a; border-radius: 0%;"
+            >
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+      
+          <!-- Remove item button -->
+          <button 
+            (click)="removeCartItem()" 
+            mat-stroked-button 
+            style="background-color: #d7c59a; border-radius: 0%; color: black;">
+            Remove
+          </button>
+        </div>
+      
   }
 </div>

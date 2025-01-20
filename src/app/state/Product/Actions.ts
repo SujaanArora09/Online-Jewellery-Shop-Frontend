@@ -1,4 +1,21 @@
 import { createAction, props } from '@ngrx/store';
+import { Product } from '../../Models/Product';
+
+
+export const findRelatedProductsRequest = createAction(
+  '[Product] Find Related Products Request',
+  props<{ topLavelCategory: string; secondLavelCategory: string; thirdLavelCategory: string }>()
+);
+
+export const findRelatedProductsSuccess = createAction(
+  '[Product] Find Related Products Success',
+  props<{ payload: Product[] }>()
+);
+
+export const findRelatedProductsFailure = createAction(
+  '[Product] Find Related Products Failure',
+  props<{ error: any }>()
+);
 
 export const findProductsByCategoryRequest = createAction(
   '[Product] Find Products By Category Request',
@@ -19,7 +36,7 @@ export const findProductByIdRequest = createAction(
 );
 export const findProductByIdSuccess = createAction(
   '[Product] Find Product By Id Success',
-  props<{ payload: any }>()
+  props<{ payload: Product }>()
 );
 export const findProductByIdFailure = createAction(
   '[Product] Find Product By Id Failure',
