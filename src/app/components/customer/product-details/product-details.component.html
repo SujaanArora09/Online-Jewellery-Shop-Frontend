@@ -157,17 +157,21 @@
       </div>
     </section>
   
-    <!-- Related Products -->
-  
-    <section class="mt-10">
-      <h1 class="py-5 text-gray-400">Related Products</h1>
-  
-      <div class="flex justify-around flex-wrap">
-        @for(product of relatedProducts; track product){
-          <app-product-card [product]="product" />
-        }
-        
+    <!-- Related Products Section -->
+
+  <section class="mt-10">
+    <h1 class="py-5 text-gray-400">Related Products</h1>
+
+    <!-- Display Related Products if available -->
+    <div *ngIf="relatedProducts$ | async as relatedProducts; else noRelatedProducts" class="flex justify-around flex-wrap">
+      <div *ngFor="let product of relatedProducts" class="product-card">
+        <app-product-card [product]="product"></app-product-card>
       </div>
-    </section>
-  </div>
-  
+    </div>
+
+    <!-- No Related Products Available -->
+    <ng-template #noRelatedProducts>
+      <p>No related products available.</p>
+    </ng-template>
+  </section>
+</div>
