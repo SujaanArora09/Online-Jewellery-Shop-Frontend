@@ -21,7 +21,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './order-details.component.css',
 })
 export class OrderDetailsComponent {
-  activeStep = 3;
+  activeStep = 1;
 
   order: any = {};
 
