@@ -16,34 +16,16 @@
         </div>
         <div class="flex items-center space-x-5">
           <p class="text-lg">₹{{ (productDetails$ | async)?.discountedPrice }}</p>
-          <p class="text-lg text-gray-700 line-through">
+          <p class="text-lg text-red-500 line-through">
             ₹{{ (productDetails$ | async)?.price }}
           </p>
           <p class="text-green-400 font-semibold text-lg">
             {{ (productDetails$ | async)?.discountPersent }}% off
           </p>
         </div>
-  
-        <div>
-          <p class="text-lg font-semibold">Size</p>
-          <mat-radio-group
-            class="space-x-5"
-            aria-label="Select an option"
-            [(ngModel)]="selectedSize"
-          >
-            <mat-radio-button value="S"> <span>S</span> </mat-radio-button>
-            <mat-radio-button value="M"
-              ><span class="m-0">M</span></mat-radio-button
-            >
-            <mat-radio-button value="L"
-              ><span class="m-0">L</span></mat-radio-button
-            >
-            <mat-radio-button value="XL"
-              ><span class="m-0 p-0">XL</span></mat-radio-button
-            >
-          </mat-radio-group>
-        </div>
-  
+        <p class="text-gray-600">
+          {{ (productDetails$ | async)?.description }}
+        </p>
         <div>
           <button
             (click)="handleAddToCart()"
@@ -57,15 +39,7 @@
         </div>
   
         <div>
-          <p class="text-gray-600">
-            {{ (productDetails$ | async)?.description }}
-          </p>
-          <p class="text-gray-600">
-            Indulge in the timeless beauty of Lengha Cholis for women and make a
-            lasting impression with our exquisite designs. Experience the epitome
-            of elegance and celebrate your femininity with our stunning
-            collection.
-          </p>
+          
         </div>
       </div>
     </section>

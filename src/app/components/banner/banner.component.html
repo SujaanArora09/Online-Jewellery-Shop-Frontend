@@ -1,144 +1,143 @@
 <div>
-    <!-- <div class="banner">
+  <!-- <div class="banner">
         
     </div>
     <img [src]="bannerImages[1].image" alt=""> -->
-    
-    <div class="relative w-full h-96 overflow-hidden">
-        <!-- Carousel items (with animation) -->
-        <div class="absolute inset-0 flex transition-all duration-500 ease-in-out" id="carousel-container">
-          <!-- Slide 1 -->
-          <div class="carousel-item w-full flex-shrink-0">
-            <img src="/assets/image1.png" class="object-cover w-full h-full" alt="...">
-          </div>
-          <!-- Slide 2 -->
-          <div class="carousel-item w-full flex-shrink-0">
-            <img src="/assets/image2.png" class="object-cover w-full h-full" alt="...">
-          </div>
-          <!-- Slide 3 -->
-          <div class="carousel-item w-full flex-shrink-0">
-            <img src="/assets/image3.png" class="object-cover w-full h-full" alt="...">
-          </div>
-        </div>
-      
-        <!-- Navigation buttons -->
-        <button class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2  rounded-full" id="prevBtn">
-          <span class="visually-hidden"></span>&lt;
-        </button>
-        <button class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2  rounded-full" id="nextBtn">
-          <span class="visually-hidden"></span>&gt;
-        </button>
+
+  <div class="relative w-full h-96 overflow-hidden">
+    <!-- Carousel items (with animation) -->
+    <div class="absolute inset-0 flex transition-all duration-500 ease-in-out" id="carousel-container">
+      <!-- Slide 1 -->
+      <div class="carousel-item w-full flex-shrink-0">
+        <img src="/assets/image1.png" class="object-cover w-full h-full" alt="...">
       </div>
-
-      <div class="categories">
-        <div onclick="" class="rings">
-            <img src="/assets/r1.png" alt="" width="75" height="75" style="border-radius: 50%;">
-            <h3>Rings</h3>
-        </div>
-        <div onclick="" class="bangles">
-            <img src="/assets/b1.png" alt="" width="75" height="75" style="border-radius: 50%;">
-            <h3>Bangles</h3>
-        </div>
-        <div onclick="" class="earrings">
-            <img src="/assets/e1.png" alt="" width="75" height="75" style="border-radius: 50%;">
-            <h3>Earrings</h3>
-        </div>
-        <div onclick="" class="pendant">
-            <img src="/assets/p1.png" alt="" width="75" height="75" style="border-radius: 50%;">
-            <h3>Pendant</h3>
-        </div>
-        <div onclick="" class="necklace">
-            <img src="/assets/n2.png" alt="" width="75" height="75" style="border-radius: 50%;">
-            <h3>Necklace</h3>
-        </div>
-        <div onclick="" class="nosepins">
-            <img src="/assets/n1.png" alt="" width="75" height="75" style="border-radius: 50%;">
-            <h3>Nose Pin</h3>
-        </div>
-        <div onclick="" class="bracelets">
-            <img src="/assets/b2.png" alt="" width="75" height="75" style="border-radius: 50%;">
-            <h3>Bracelets</h3>
-        </div>
+      <!-- Slide 2 -->
+      <div class="carousel-item w-full flex-shrink-0">
+        <img src="/assets/image2.png" class="object-cover w-full h-full" alt="...">
+      </div>
+      <!-- Slide 3 -->
+      <div class="carousel-item w-full flex-shrink-0">
+        <img src="/assets/image3.png" class="object-cover w-full h-full" alt="...">
+      </div>
     </div>
-    
-    
-      
-      <!-- Tailwind CSS-based auto-slide animation -->
-      <style>
-        /* Define the slide transition animation */
-        @keyframes slide {
-          0% {
-            transform: translateX(0);
-          }
-          33.33% {
-            transform: translateX(-100%);
-          }
-          66.66% {
-            transform: translateX(-200%);
-          }
-          100% {
-            transform: translateX(0);
-          }
-        }
-      
-        #carousel-container {
-          animation: slide 15s infinite;
-        }
 
-        .categories {
-          display: flex;
-          justify-content: space-around;
-          margin-top: 20px;
-        }
-  
-  
-        .rings h3 {
-          margin-top: 10px;
-          margin-left: 18px;
-          font-size: 13px;
-          font-family: "Montserrat", serif;
-        }
-  
-        .bangles h3 {
-          margin-top: 10px;
-          margin-left: 15px;
-          font-size: 13px;
-          font-family: "Montserrat", serif;
-        }
+    <!-- Navigation buttons -->
+    <button class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2  rounded-full" id="prevBtn">
+      <span class="visually-hidden"></span>&lt;
+    </button>
+    <button class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2  rounded-full" id="nextBtn">
+      <span class="visually-hidden"></span>&gt;
+    </button>
+  </div>
 
-        .earrings h3 {
-         margin-top: 10px;
-         margin-left: 15px;
-        font-size: 13px;
-        font-family: "Montserrat", serif;
+
+  <div class="categories">
+    <div onclick="window.location.href='/next'" class="category-item rings">
+      <img src="/assets/r1.png" alt="" class="category-img">
+      <h3>Rings</h3>
+    </div>
+    <div onclick="window.location.href='/next'" class="category-item bangles">
+      <img src="/assets/b1.png" alt="" class="category-img">
+      <h3>Bangles</h3>
+    </div>
+    <div onclick="window.location.href='/next'" class="category-item earrings">
+      <img src="/assets/e1.png" alt="" class="category-img">
+      <h3>Earrings</h3>
+    </div>
+    <div onclick="window.location.href='/next'" class="category-item pendant">
+      <img src="/assets/p1.png" alt="" class="category-img">
+      <h3>Pendant</h3>
+    </div>
+    <div onclick="window.location.href='/next'" class="category-item necklace">
+      <img src="/assets/n2.png" alt="" class="category-img">
+      <h3>Necklace</h3>
+    </div>
+    <div onclick="window.location.href='/next'" class="category-item nosepins">
+      <img src="/assets/n1.png" alt="" class="category-img">
+      <h3>Nose Pin</h3>
+    </div>
+    <div onclick="window.location.href='/next'" class="category-item bracelets">
+      <img src="/assets/b2.png" alt="" class="category-img">
+      <h3>Bracelets</h3>
+    </div>
+  </div>
+
+
+
+
+  <!-- Tailwind CSS-based auto-slide animation -->
+  <style>
+    /* Define the slide transition animation */
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
       }
- 
-      .pendant h3 {
-         margin-top: 10px;
-         margin-left: 16px;
-         font-size: 13px;
-         font-family: "Montserrat", serif;
+
+      33.33% {
+        transform: translateX(-100%);
       }
-  
-  .necklace h3 {
-    margin-top: 10px;
-    margin-left: 15px;
-    font-size: 13px;
-    font-family: "Montserrat", serif;
-  }
-  
-  .nosepins h3 {
-    margin-top: 10px;
-    margin-left: 15px;
-    font-size: 13px;
-    font-family: "Montserrat", serif;
-  }
-  
-  .bracelets h3 {
-    margin-top: 10px;
-    margin-left: 15px;
-    font-size: 13px;
-    font-family: "Montserrat", serif;
-  }
-      </style>
-      
+
+      66.66% {
+        transform: translateX(-200%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    #carousel-container {
+      animation: slide 15s infinite;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .category-item {
+      width: 100px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+      border: 2px solid transparent;
+      /* Invisible border by default */
+    }
+
+    .category-item:hover {
+      transform: scale(0.95);
+      /* Scale down the image */
+      border: 2px solid #0000002d;
+    }
+
+    .category-img {
+      width: 75px;
+      height: 75px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .category-item h3 {
+      margin-top: 10px;
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+    }
+
+    /* Ensures the image stays square and adjusts with container size */
+    .category-item {
+      aspect-ratio: 1 / 1;
+      /* This makes it square */
+      width: 100px;
+      /* Adjust as needed */
+    }
+  </style>
